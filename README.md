@@ -23,36 +23,57 @@ API project using Laravel/Lumen framework to provide REST API server
 6. Import the provided files (customer.csv, product.csv) to the database.
 
 7. Inside the project directory enter the command line to start the server on port 5555
-  ```$ php -S localhost:5555 -t public```
+
+```bash
+  $ php -S localhost:5555 -t public
+```
 
 ### Testing the API:
 **/getCustomerRequest (POST)**
 
 	The following fields are mandatory to be sent on the request.
-		 *  identifier: string. > Column to be searched. Possible values: 'forename', 'surname', 'email', 'contact_number', 'postcode'.
+		 
+		 *  identifier: string. > Column to be searched. 
+		 	Possible values: 'forename', 'surname', 'email', 'contact_number', 'postcode'.
+		 
 		 *  identifierField: string. > Value to search for e.g.: 'Tom'.
-		 *  fields: array. > Which fields will be returned on the response. Possible values: ['forename', 'surname', 'email', 'contact_number', 'postcode'] or use ['*'] for all.
+		 
+		 *  fields: array. > Which fields will be returned on the response. 
+		 	Possible values: ['forename', 'surname', 'email', 'contact_number', 'postcode'] or use ['*'] for all.
 		 
 	Sample wget call: 
 	
-	```$ wget --no-check-certificate --quiet --method POST --timeout=0 --header 'Content-Type: application/json' --body-data '{"identifier": "forename", "identifierField": "Tom", "fields": ["surname","postcode"]}' 'http://localhost:5555/getCustomerRequest/'```
+```bash
+	$ wget --no-check-certificate --quiet --method POST --timeout=0 --header 'Content-Type: application/json' --body-data '{"identifier": "forename", "identifierField": "Tom", "fields": ["surname","postcode"]}' 'http://localhost:5555/getCustomerRequest/'
+```
 	
 	
 **/getProductRequest  (POST)**
 
 	The following fields are mandatory to be sent on the request.
-		 *  identifier: string. > Column to be searched. Possible values: 'vin', 'make', 'model', 'colour', 'price'.
+
+		 *  identifier: string. > Column to be searched. 
+		 	Possible values: 'vin', 'make', 'model', 'colour', 'price'.
+
 		 *  identifierField: string. > Value to search for e.g.: 'Ford'.
-		 *  fields: array. > Which fields will be returned on the response. Possible values: ['vin', 'make', 'model', 'colour', 'price'] or use ['*'] for all.
+
+		 *  fields: array. > Which fields will be returned on the response. 
+		 	Possible values: ['vin', 'make', 'model', 'colour', 'price'] or use ['*'] for all.
 		 
 	Sample wget call: 
 	
-	```$ wget --no-check-certificate --quiet --method POST --timeout=0 --header 'Content-Type: application/json' --body-data '{"identifier": "vin", "identifierField": "ASDF123456", "fields": ["colour","make"]}' 'http://localhost:5555/getProductRequest/'```
+```bash
+	$ wget --no-check-certificate --quiet --method POST --timeout=0 --header 'Content-Type: application/json' --body-data '{"identifier": "vin", "identifierField": "ASDF123456", "fields": ["colour","make"]}' 'http://localhost:5555/getProductRequest/'
+```
 	
 #### PHP Unit Tests: 
 On the project root directory, run: 
-```$ vendor/bin/phpunit```
+```bash
+$ vendor/bin/phpunit
+```
+
 Expected result: 5 tests, 7 assertions.
 
 #### Testing with Postman:
+
 Import the collection file 'API Postman Collection.postman_collection.json' into your Postman software and execute the requests. 
