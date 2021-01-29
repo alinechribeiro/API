@@ -45,6 +45,6 @@ API project using Laravel/Lumen framework to provide REST API server
 	```$ wget --no-check-certificate --quiet --method POST --timeout=0 --header 'Content-Type: application/json' --body-data '{"identifier": "vin", "identifierField": "ASDF123456", "fields": ["colour","make"]}' 'http://localhost:5555/getProductRequest/'```
 	
 #### PHP Unit Tests: 
-1. On the project root directory, run: 
+On the project root directory, run: 
 ```$ vendor/bin/phpunit```
 Expected result: 5 tests, 7 assertions.
