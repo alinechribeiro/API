@@ -5,7 +5,7 @@ API project using Laravel/Lumen framework to provide REST API server
 
 1. Clone the project 
 
-2. Create database "rockar"
+2. Create database
 
 3. Create database user
 
@@ -20,7 +20,9 @@ API project using Laravel/Lumen framework to provide REST API server
   
 5. Go to the project directory and run the database migration with the command line: php artisan migrate
 
-6. Inside the project directory enter the command line to start the server on port 5555
+6. Import the provided files (customer.csv, product.csv) to the database.
+
+7. Inside the project directory enter the command line to start the server on port 5555
   ```$ php -S localhost:5555 -t public```
 
 ### Testing the API:
@@ -51,3 +53,6 @@ API project using Laravel/Lumen framework to provide REST API server
 On the project root directory, run: 
 ```$ vendor/bin/phpunit```
 Expected result: 5 tests, 7 assertions.
+
+#### Testing with Postman:
+Import the collection file 'API Postman Collection.postman_collection.json' into your Postman software and execute the requests. 
