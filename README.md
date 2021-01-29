@@ -18,7 +18,11 @@ API project using Laravel/Lumen framework to provide REST API server
   	DB_PASSWORD=CHANGE HERE
   
   
-5. Go to the project directory and run the database migration with the command line: php artisan migrate
+5. Go to the project directory and run the database migration with the command line: 
+
+```bash
+$ php artisan migrate
+```
 
 6. Import the provided files (customer.csv, product.csv) to the database.
 
