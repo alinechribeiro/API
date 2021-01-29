@@ -11,11 +11,11 @@ API project using Laravel/Lumen framework to provide REST API server
 
 4. Open the file .env and change the fields 
 
-  DB_DATABASE=CHANGE HERE
+  	DB_DATABASE=CHANGE HERE
   
-  DB_USERNAME=CHANGE HERE
+  	DB_USERNAME=CHANGE HERE
   
-  DB_PASSWORD=CHANGE HERE
+  	DB_PASSWORD=CHANGE HERE
   
   
 5. Go to the project directory and run the database migration with the command line: php artisan migrate
